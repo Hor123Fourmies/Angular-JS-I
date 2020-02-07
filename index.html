@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="Viewport" content="width=device-width, user-scalable=no">
+    <script src="angular.min.js"></script>
+    <script src="angular-route.js"></script>
+</head>
+<body>
+
+
+<div data-ng-app="monAppli" data-ng-init="name='Entrez votre nom'" data-ng-controller="monControlleur">
+    <p>Nom : <input type="text" data-ng-model="name"></p>
+    <p>Prénom : <input type="text" data-ng-model="firstname"></p>
+    <p data-ng-bind="name"></p>
+    <p data-ng-bind="firstname"></p>
+    <span>Vos nom et prénom sont : {{name}} {{firstname}}</span>
+    <!--
+    <ol>
+        <li>{{film1}}</li>
+        <li>{{film2}}</li>
+    </ol>
+    -->
+    <ol>
+        <li data-ng-repeat="film in films">{{film}}</li>
+    </ol>
+
+    <input type="text" name="ajoutFilm" data-ng-model="ajoutFilm">
+    <button data-ng-click="ajouterFilm()">Ajouter un film</button>
+
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
